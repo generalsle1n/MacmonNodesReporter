@@ -32,6 +32,12 @@ namespace MacmonNodesReporter
             List<MacmonServer> AllServer = _configuration.GetSection(_serverSection).Get<List<MacmonServer>>();
             foreach (MacmonServer SingleServer in AllServer)
             {
+                if (SingleServer.Static)
+                {
+                    _logger.LogWarning($"For {SingleServer.Customer}: Maclimit {SingleServer.NodeCount}");
+                }
+                else
+                {
                 _logger.LogInformation($"Process Server: {SingleServer.Adress} with User: {SingleServer.Username}");
                 HttpResponseMessage Response = await GetLicenseOptionsAsync(SingleServer);
                 if (Response is not null)
@@ -45,6 +51,7 @@ namespace MacmonNodesReporter
                     _logger.LogError($"{SingleServer.Adress} is not available, check connection");
                 }
             }
+        }
         }
 
         private string CreateBase64String(string Username, string Password)
