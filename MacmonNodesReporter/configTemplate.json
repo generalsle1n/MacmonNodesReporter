@@ -1,0 +1,30 @@
+{
+  "Server": [
+    {
+      "Adress": "",
+      "Port": 443,
+      "Username": "",
+      "Password": "",
+      "Customer": ""
+    },
+    {
+      "Adress": "",
+      "Port": 443,
+      "Username": "",
+      "Password": "",
+      "Customer": ""
+    }
+  ],
+  "Filter": {
+    "Name": "OBSERVER",
+    "LimitName": "maclimit"
+  },
+  "Log": {
+    "SlackWebook": ""
+  },
+  "Interval": {
+    "LoopIntervalInHours": false,
+    "StartDayInMonth": 24,
+    "Hours": 0
+  }
+}
