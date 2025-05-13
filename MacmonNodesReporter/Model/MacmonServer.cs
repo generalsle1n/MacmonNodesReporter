@@ -13,5 +13,7 @@ namespace MacmonNodesReporter.Model
         public string Username { get; set; }
         public string Password { get; set; }
         public string Customer { get; set; }
+        public bool Static { get; set; }
+        public int NodeCount { get; set; }
     }
 }
