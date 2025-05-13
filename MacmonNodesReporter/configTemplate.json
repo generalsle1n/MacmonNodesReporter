@@ -5,14 +5,13 @@
       "Port": 443,
       "Username": "",
       "Password": "",
-      "Customer": ""
+      "Customer": "",
+      "Static": false
     },
     {
-      "Adress": "",
-      "Port": 443,
-      "Username": "",
-      "Password": "",
-      "Customer": ""
+      "Customer": "",
+      "NodeCount": 250,
+      "Static": true
     }
   ],
   "Filter": {
